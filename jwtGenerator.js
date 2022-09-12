@@ -31,7 +31,7 @@ let parsedKey = JSON.parse(jwk);
 jose.importJWK(parsedKey).then((key) =>
     new jose.SignJWT({})
         .setProtectedHeader({ alg: "ES256", typ: "JWT", kid: parsedKey.kid })
-        .setIssuer("167372")
+        .setIssuer("123456")
         .setSubject("appPin")
         .sign(key)
         .then(token => console.log(token))
